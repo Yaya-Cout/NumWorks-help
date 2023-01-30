@@ -1,0 +1,583 @@
+<h1 data-number="1" id="disclaimer"><span
+class="header-section-number">1</span> Disclaimer</h1>
+<p>Cette aide est non exhaustive et peut contenir des erreurs. Si vous
+trouvez une erreur ou si votre problème n’est pas résolu/couvert,
+n’hésitez pas à rejoindre le <a
+href="https://discord.gg/hnEqPzAJzn">serveur Discord</a> (ouvrez un post
+dans le forum <code>#help</code>).</p>
+<h1 data-number="2" id="introduction"><span
+class="header-section-number">2</span> Introduction</h1>
+<p>Ce guide a pour but de vous aider à résoudre les problèmes que vous
+pouvez rencontrer avec votre calculatrice. Si vous avez un problème qui
+n’est pas résolu/couvert par ce guide, n’hésitez pas à rejoindre le <a
+href="https://discord.gg/hnEqPzAJzn">serveur Discord</a> (ouvrez un post
+dans le forum <code>#help</code>).</p>
+<h1 data-number="3" id="problèmes-courants"><span
+class="header-section-number">3</span> Problèmes courants</h1>
+<h2 data-number="3.1" id="ma-numworks-est-elle-déverrouillée"><span
+class="header-section-number">3.1</span> Ma NumWorks est-elle
+déverrouillée ?</h2>
+<p>Pour savoir si votre NumWorks est déverrouillée, il suffit d’appuyer
+sur RESET et 6 simultanément (le RESET doit être relâché avant le
+6).</p>
+<ul>
+<li>Si la calculatrice affiche <code>numworks.com/rescue</code>, alors
+elle est verrouillée.</li>
+<li>Si elle affiche un écran noir et une LED rouge, alors elle est
+déverrouillée.</li>
+</ul>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Si aucune des deux situations ne se
+produit, réessayez d’appuyer sur les touches RESET et 6.</p>
+</blockquote>
+<h2 data-number="3.2" id="déverrouiller-ma-numworks"><span
+class="header-section-number">3.2</span> Déverrouiller ma NumWorks</h2>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Cette section est en cours de
+rédaction.</p>
+</blockquote>
+<!-- TODO -->
+<h3 data-number="3.2.1"
+id="ma-calculatrice-reste-bloquée-sur-le-bootloader-après-le-downgrade"><span
+class="header-section-number">3.2.1</span> Ma calculatrice reste bloquée
+sur le bootloader après le downgrade</h3>
+<p>Si votre calculatrice reste bloquée sur le bootloader d’Epsilon
+(écran <code>numworks.com/rescue</code>) après avoir effectué un
+downgrade après avoir appuyé sur RESET, c’est que votre calculatrice est
+protégée contre le downgrade. Dans ce cas, vous avez deux options :</p>
+<ul>
+<li>Vous pouvez remettre Epsilon en faisant une mise à jour depuis le <a
+href="https://www.numworks.com/">site officiel de NumWorks</a>.</li>
+<li>Vous pouvez déverrouiller votre NumWorks avec un Raspberry Pi. Pour
+plus d’informations, consultez la section <a
+href="#déverrouiller-avec-un-raspberry-pi">Déverrouiller avec un
+Raspberry Pi</a>.</li>
+</ul>
+<h3 data-number="3.2.2" id="déverrouiller-avec-un-raspberry-pi"><span
+class="header-section-number">3.2.2</span> Déverrouiller avec un
+Raspberry Pi</h3>
+<p>Pour déverrouiller votre NumWorks avec un Raspberry Pi, vous devez
+suivre les instructions sur le <a
+href="https://tiplanet.org/forum/viewtopic.php?f=113&amp;t=25191">Tutoriel
+de déverrouillage de Ti-Planet</a>.</p>
+<h4 data-number="3.2.2.1"
+id="error-error-connecting-dp-cannot-read-idr"><span
+class="header-section-number">3.2.2.1</span> Error: Error connecting DP:
+cannot read IDR</h4>
+<p>Si vous obtenez l’erreur
+<code>Error: Error connecting DP: cannot read IDR</code> lorsque vous
+essayez de déverrouiller votre NumWorks avec un Raspberry Pi, c’est que
+vos câbles ne sont pas branchés correctement. Vérifiez que les câbles
+touchent bien les pads de la calculatrice et que les câbles sont bien
+branchés sur le Raspberry Pi.</p>
+<h2 data-number="3.3" id="installation-domega"><span
+class="header-section-number">3.3</span> Installation d’Omega</h2>
+<h3 data-number="3.3.1" id="comment-installer-omega"><span
+class="header-section-number">3.3.1</span> Comment installer Omega
+?</h3>
+<p>Pour installer Omega, votre NumWorks doit être déverrouillée. Si vous
+ne savez pas si votre NumWorks est déverrouillée, consultez la section
+<a href="#ma-numworks-est-elle-déverrouillée">Ma NumWorks est-elle
+déverrouillée ?</a>.</p>
+<p>À cause d’un problème avec le site d’Omega, vous devez aller en mode
+de récupération (à l’aide du site d’Omega) pour installer Omega. Pour
+plus d’informations, consultez la section <a
+href="#mode-de-récupération">Mode de récupération</a>.</p>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Cette maniplulation n’est pas
+nécessaire si vous avez une version d’Omega inferieure ) 2.0.0 ou si
+vous avez une version d’Epsilon antérieure à 16.0.0.</p>
+</blockquote>
+<p>Une fois que vous êtes en mode de récupération, vous pouvez installer
+Omega normalement :</p>
+<ol type="1">
+<li>Accédez au <a href="https://getomega.dev/install/latest">site
+d’Omega</a> et cliquez sur <code>DETECT CALCULATOR</code> et
+sélectionnez votre NumWorks.</li>
+</ol>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Si vous avez déjà connecté votre
+NumWorks au site d’Omega, ce bouton pourrait ne pas être visible. Dans
+ce cas, passez à l’étape 2.</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Cliquez sur <code>INSTALL OMEGA</code>.</li>
+<li>Attendez que l’installation soit terminée.</li>
+</ol>
+<p>Une fois que l’installation est terminée, votre NumWorks devrait
+redémarrer automatiquement. Si ce n’est pas le cas, redémarrez votre
+NumWorks en appuyant sur RESET. Omega est maintenant installé sur votre
+NumWorks.</p>
+<h3 data-number="3.3.2"
+id="ma-numworks-redémarre-sans-cesse-quand-le-site-domega-est-ouvert"><span
+class="header-section-number">3.3.2</span> Ma NumWorks redémarre sans
+cesse quand le site d’Omega est ouvert</h3>
+<p>C’est un problème connu. Il est dû au fait que votre NumWorks tourne
+sous Epsilon 19, qui n’est pas compatible avec le site d’Omega. La façon
+de résoudre ce problème dépend de votre configuration :</p>
+<ul>
+<li><p>Si votre calculatrice est verrouillée, vous devez la
+Déverrouiller pour pouvoir installer Omega. Pour plus d’informations,
+consultez la section <a href="#Déverrouiller-ma-numworks">Déverrouiller
+ma NumWorks</a>.</p></li>
+<li><p>Si votre calculatrice est déverrouillée, vous pouvez installer
+Omega à partir de la section <a href="#comment-installer-omega">Comment
+installer Omega ?</a>.</p></li>
+</ul>
+<p>Si vous ne savez pas si votre NumWorks est déverrouillée, consultez
+la section <a href="#ma-numworks-est-elle-déverrouillée">Ma NumWorks
+est-elle déverrouillée ?</a>.</p>
+<h3 data-number="3.3.3" id="linstallation-domega-navance-pas"><span
+class="header-section-number">3.3.3</span> L’installation d’Omega
+n’avance pas</h3>
+<p>Si la barre de progression de l’installation d’Omega ne bouge pas,
+c’est qu’il y a eu un problème lors de l’installation. Cela est surement
+dû à un problème dans le site d’Omega. Pour résoudre ce problème, suivez
+les instructions d’installation d’Omega à partir de la section <a
+href="#comment-installer-omega">Comment installer Omega ?</a>.</p>
+<h2 data-number="3.4" id="mode-de-récupération"><span
+class="header-section-number">3.4</span> Mode de récupération</h2>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Cette section ne concerne que les
+NumWorks déverrouillées.</p>
+</blockquote>
+<p>Pour aller en mode de récupération, vous devez accéder au bootloader
+interne du STM32, pus installer le mode de récupération.</p>
+<h3 data-number="3.4.1"
+id="accéder-au-bootloader-interne-du-stm32"><span
+class="header-section-number">3.4.1</span> Accéder au bootloader interne
+du STM32</h3>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Cette section ne concerne que les
+NumWorks déverrouillées.</p>
+</blockquote>
+<p>Pour accéder au bootloader interne du STM32, vous devez appuyer sur
+RESET et 6 en même temps (le RESET doit être relâché avant le 6).</p>
+<p>Si vous avez réussi, votre NumWorks aura un écran noir et une LED
+rouge.</p>
+<p>Si ce n’est pas le cas, réessayez d’appuyer sur les touches RESET et
+6.</p>
+<h3 data-number="3.4.2" id="installer-le-mode-de-récupération"><span
+class="header-section-number">3.4.2</span> Installer le mode de
+récupération</h3>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Cette section ne concerne que les
+NumWorks déverrouillées.</p>
+</blockquote>
+<p>Une fois dans le bootloader interne du STM32, vous devez installer le
+mode de récupération. Pour ce faire, vous devez accéder au <a
+href="https://getomega.dev/install/latest">site d’Omega</a> et cliquer
+sur <code>RECOVERY</code>.</p>
+<p>Une fois que vous avez cliqué sur <code>RECOVERY</code>, vous devriez
+voir un sélecteur de périphérique. Sélectionnez
+<code>STM32 BOOTLOADER</code> et cliquez sur <code>Connexion</code>.</p>
+<blockquote>
+<p><strong><em>NOTE : </em></strong> : Si vous ne voyez pas
+<code>STM32 BOOTLOADER</code> dans le sélecteur de périphérique,
+rendez-vous dans la section <a
+href="#ma-calculatrice-nest-pas-détectéeacces-denied">Ma calculatrice
+n’est pas détectée/Acces denied</a>.</p>
+</blockquote>
+<p>Une fois que vous avez cliqué sur <code>Connexion</code>, vous
+devriez voir une barre de progression. Lorsque la barre de progression
+sera complète, vous devriez voir votre NumWorks s’allumer et afficher
+<code>RECOVERY MODE</code> et d’autres informations.</p>
+<p>Bravo ! Vous avez réussi à installer le mode de récupération ! Si
+vous êtes allé dans cette section à cause d’un autre problème, vous
+pouvez maintenant retourner dans la section précédente.</p>
+<h2 data-number="3.5"
+id="ma-calculatrice-nest-pas-détectéeacces-denied"><span
+class="header-section-number">3.5</span> Ma calculatrice n’est pas
+détectée/Acces denied</h2>
+<p>Si votre NumWorks n’est pas détectée, cela peut être dû à plusieurs
+raisons. Il est difficile de savoir laquelle et les causes ne sont pas
+totalement connues. Malgré tout, il y a des solutions prouvées qui
+peuvent résoudre ce problème. Les sections suivantes vous expliquent
+comment résoudre ce problème (Windows uniquement).</p>
+<h4 data-number="3.5.0.1"
+id="ma-calculatrice-nest-pas-détectée-sous-windows"><span
+class="header-section-number">3.5.0.1</span> Ma calculatrice n’est pas
+détectée sous Windows</h4>
+<h5 data-number="3.5.0.1.1"
+id="réinstallerréparer-le-driver-sur-windows"><span
+class="header-section-number">3.5.0.1.1</span> Réinstaller/réparer le
+driver sur Windows</h5>
+<p>Pour réinstaller/réparer le driver, vous devez télécharger le fichier
+du driver.</p>
+<p>Voici les liens pour télécharger le driver : (Windows)</p>
+<ul>
+<li><a
+href="https://cdn.numworks.com/81cc6426/numworks-driver-win64.msi">Driver
+64 bits</a></li>
+<li><a
+href="https://cdn.numworks.com/2dc0a0b1/numworks-driver-win32.msi">Driver
+32 bits</a></li>
+</ul>
+<blockquote>
+<p><strong><em>NOTE :</em></strong> Si vous ne savez pas si vous avez
+une version 32 bits ou 64 bits de Windows, vous avez probablement une
+version 64 bits car la majorité des ordinateurs sont équipés de
+processeurs 64 bits.</p>
+</blockquote>
+<p>Une fois que vous avez téléchargé le driver, vous devez l’installer.
+Pour ce faire, vous devez :</p>
+<ol type="1">
+<li>Ouvrir le fichier téléchargé.</li>
+<li>Cliquer sur <code>Installer</code> (ou <code>Réparer</code> si vous
+avez déjà installé le driver).</li>
+<li>Attendez que l’installation soit terminée.</li>
+</ol>
+<p>Une fois que l’installation est terminée, redémarrez votre ordinateur
+et réessayez de connecter votre NumWorks. Si le problème persiste,
+passez à la section suivante.</p>
+<h5 data-number="3.5.0.1.2"
+id="changer-le-driver-via-le-gestionnaire-de-périphériques"><span
+class="header-section-number">3.5.0.1.2</span> Changer le driver via le
+gestionnaire de périphériques</h5>
+<p>Si vous avez déjà réinstallé le driver de NumWorks et avec Zadig et
+que le problème persiste, vous pouvez essayer de changer le driver via
+le gestionnaire de périphériques.</p>
+<p>Pour changer le driver via le gestionnaire de périphériques, vous
+devez :</p>
+<ol type="1">
+<li>Ouvrir le gestionnaire de périphériques. (Clic droit sur le bouton
+démarrer -&gt; Gestionnaire de périphériques)</li>
+<li>Rechercher un nom de périphérique avec <code>STM</code> dans le nom.
+(ex: <code>Guillemot STM    DFU Device</code>)</li>
+<li>Clic droit sur le périphérique -&gt; Mettre à jour le pilote -&gt;
+Parcourir mon poste de travail pour rechercher des pilotes -&gt; Choisir
+parmi ue liste de pilotes disponibles sur mon ordinateur -&gt; NumWorks
+Graphing Calculator -&gt; Suivant -&gt; Fermer.</li>
+<li>Vérifiez que le périphérique est bien <code>STM32 BOOTLOADER</code>
+ou <code>NumWorks    Calculator</code> dans le gestionnaire de
+périphériques.</li>
+</ol>
+<p>Une fois cela fait, redémarrez votre ordinateur et réessayez de
+connecter votre NumWorks. Si le problème persiste, passez à la section
+suivante.</p>
+<h5 data-number="3.5.0.1.3" id="installer-le-driver-via-zadig"><span
+class="header-section-number">3.5.0.1.3</span> Installer le driver via
+Zadig</h5>
+<p>Si vous avez déjà installé le driver et que le problème persiste,
+vous pouvez essayer d’installer le driver via Zadig.</p>
+<p>Pour installer le driver via Zadig, vous devez télécharger Zadig.</p>
+<p>Voici le lien pour télécharger Zadig : <a
+href="https://zadig.akeo.ie/">Zadig</a></p>
+<p>Une fois que vous avez téléchargé Zadig, vous devez l’installer. Pour
+ce faire, vous devez :</p>
+<ol type="1">
+<li>Ouvrir le fichier téléchargé.</li>
+<li>Sélectionner <code>STM32 BOOTLOADER</code> dans le menu déroulant.
+(si vous ne le voyez pas, tentez d’afficher tous les périphériques en
+cochant la case <code>List all    devices</code> dans le menu
+<code>Options</code>).</li>
+<li>Installer le driver en cliquant sur
+<code>Reinstall WCID Driver</code>.</li>
+</ol>
+<p>Une fois cela fait, redémarrez votre ordinateur et réessayez de
+connecter votre NumWorks. Si le problème persiste, retournez à la
+section précédente. Si cela ne fonctionne toujours pas, rejoignez le <a
+href="https://discord.gg/hnEqPzAJzn">serveur Discord</a> pour obtenir de
+l’aide.</p>
+<h3 data-number="3.5.1" id="acces-denied-sur-linux"><span
+class="header-section-number">3.5.1</span> Acces denied sur Linux</h3>
+<p>Si vous avez un message d’erreur <code>Acces denied</code> lorsque
+vous essayez de vous connecter à votre NumWorks, c’est que vous n’avez
+pas le “driver” (il s’agit plutôt de règles de permissions pour que
+l’utilisateur puisse accéder a la calculatrice) installé. Pour résoudre
+ce problème, vous devez installer le driver.</p>
+<p>Pour installer le driver, vous devez :</p>
+<ol type="1">
+<li>Ouvrir un terminal.</li>
+<li>Entrer la commande
+<code>sudo wget -O /etc/udev/rules.d/50-numworks-calculator.rules     https://cdn.numworks.com/f2be8a48/50-numworks-calculator.rules</code>
+pour télécharger et installer le driver.</li>
+</ol>
+<p>Une fois que le driver est installé, redémarrez votre ordinateur et
+réessayez de vous connecter à votre NumWorks. Si le problème persiste,
+rejoignez le <a href="https://discord.gg/hnEqPzAJzn">serveur Discord</a>
+pour obtenir de l’aide.</p>
+<h2 data-number="3.6" id="unable-to-claim-interface"><span
+class="header-section-number">3.6</span> Unable to claim interface</h2>
+<p>Si vous avez un message d’erreur
+<code>Unable to claim interface</code> lorsque vous essayez de vous
+connecter à votre NumWorks, c’est que votre NumWorks est déjà connectée
+à un autre site. Pour résoudre ce problème, vous devez fermer tous les
+autres sites qui sont connectés à votre NumWorks. Si votre problème
+persiste, tentez de redémarrer votre ordinateur.</p>
+<h2 data-number="3.7"
+id="the-bootloader-has-detected-a-crash-lors-du-démarrage-dupsilon"><span
+class="header-section-number">3.7</span> The bootloader has detected a
+crash lors du démarrage d’Upsilon</h2>
+<p>Lorsque vous essayez de démarrer Upsilon, vous avez un message
+d’erreur <code>The bootloader has detected a crash</code>. Pour résoudre
+ce problème, vous devez débrancher votre NumWorks le temps de
+sélectionner la langue et le pays.</p>
+<h2 data-number="3.8"
+id="la-batterie-de-ma-calculatrice-se-décharge-très-vite-avec-lhorloge-activée"><span
+class="header-section-number">3.8</span> La batterie de ma calculatrice
+se décharge très vite avec l’horloge activée</h2>
+<p>Si vous avez l’horloge activée dans Omega ou Upsilon, votre batterie
+se décharge très vite. Pour résoudre ce problème, vous avez deux
+solutions :</p>
+<ul>
+<li>Désactiver totalement l’horloge. Pour ce faire, rendez-vous dans les
+paramètres de l’heure et désactivez l’horloge.</li>
+<li>Passer en mode économie d’énergie. Votre horloge sera toujours
+active, mais ne consommera quasiment pas de batterie. Par contre,
+l’horloge dérivera beaucoup plus vite. Pour activer le mode économie
+d’énergie, rendez-vous dans l’application Python et lancez</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> time <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>setrtcmode(<span class="dv">1</span>)</span></code></pre></div>
+<h2 data-number="3.9" id="bootloader-upsilon"><span
+class="header-section-number">3.9</span> Bootloader Upsilon</h2>
+<p>Upsilon possède son propre bootloader, basé sur celui d’Omega. Le
+bootloader d’Upsilon est amélioré par rapport à celui d’Omega. Les
+principales différences sont :</p>
+<ul>
+<li>Le bootloader d’Upsilon s’affiche a chaque démarrage de la
+calculatrice.</li>
+<li>LE bootloader d’Upsilon a</li>
+</ul>
+<h3 data-number="3.9.1" id="this-version-can-lock-your-calculator"><span
+class="header-section-number">3.9.1</span> This version can lock your
+calculator</h3>
+<p>Si vous avez un message d’erreur
+<code>This version can lock your calculator</code> lorsque vous essayez
+de démarrer Epsilon depuis le bootloader d’Upsilon, ce message peut être
+ignoré dans certains cas.</p>
+<ul>
+<li>La version d’Epsilon jusqu’à 20.2.0 devraient marcher sans problème
+: vous pouvez donc ignorer ce message à l’aide de la touche
+<code>EXE</code></li>
+<li>Les versions d’Epsilon après 20.2.0 n’ont pas été testées au moment
+de la rédaction de ce guide. Si vous avez un message d’erreur
+<code>This version can lock   your calculator</code> avec une version
+d’Epsilon après 20.2.0, vous pouvez tenter de démarrer Epsilon, mais
+vous risquez de vérouiller votre NumWorks.</li>
+</ul>
+<h3 data-number="3.9.2"
+id="quelle-est-la-version-de-mon-bootloader"><span
+class="header-section-number">3.9.2</span> Quelle est la version de mon
+bootloader ?</h3>
+<p>Pour savoir quelle version de bootloader vous utilisez, vous devez
+enter dans le bootloader d’Upsilon à l’aide du bouton RESET. Une fois
+dans le bootloader, appuyez sur la touche 5 (<code>About</code>) et vous
+verrez la version de votre bootloader en bas de l’écran.</p>
+<h2 data-number="3.10"
+id="lécran-de-ma-calculatrice-grésille-après-avoir-mis-à-jour-epsilon"><span
+class="header-section-number">3.10</span> L’écran de ma calculatrice
+grésille après avoir mis à jour Epsilon</h2>
+<!-- TODO: Ne boot pas avec le bootloader Upsilon -->
+<p>Si l’écran de votre NumWorks clignote ou “grésille” après avoir mis à
+jour Epsilon, c’est que vous utilisez une version d’Epsilon qui n’est
+pas compatible avec votre bootloader.</p>
+<ul>
+<li>Si vous le bootloader d’Upsilon, passez en <a
+href="#mode-de-récupération">Mode de récupération</a> et installez la
+dernière version d’Upsilon.</li>
+<li>Si vous utilisez le bootloader d’Omega, passez en <a
+href="#mode-de-récupération">Mode de récupération</a> et installez la
+dernière version d’Omega.</li>
+</ul>
+<h2 data-number="3.11" id="webdfu"><span
+class="header-section-number">3.11</span> WebDFU</h2>
+<p>Le WebDFU est un outil qui permet de flasher des fichiers binaires
+sur votre NumWorks. Il est utilisé lors du downgrade de votre NumWorks
+sur Epsilon 18.2.0 et lors de l’installation manuelle d’Omega. Pour y
+accéder, vous devez cliquer <a
+href="https://ti-planet.github.io/webdfu_numworks/n0110/">ici</a>.</p>
+<h3 data-number="3.11.1" id="dfu-download-failed-state10-status15"><span
+class="header-section-number">3.11.1</span> DFU DOWNLOAD failed
+state=10, status=15</h3>
+<!-- Si vous avez un message d'erreur `DFU DOWNLOAD failed state=10, status=15` en
+utilisant le WebDFU, vérifiez que votre NumWorks n'est pas connectée à un autre
+site et que vous utilisez bien le [WebDFU pour NumWorks].
+(`https://ti-planet.github.io/webdfu_numworks/n0110/`) -->
+<p>Si vous avez un message d’erreur
+<code>DFU DOWNLOAD failed state=10, status=15</code> en utilisant le
+WebDFU, vérifiez que vous utilisez bien le <a
+href="https://ti-planet.github.io/webdfu_numworks/n0110/">WebDFU pour
+NumWorks</a>.
+(<code>https://ti-planet.github.io/webdfu_numworks/n0110/</code>)</p>
+<h3 data-number="3.11.2" id="adress-0x9000000-out-of-memory-map"><span
+class="header-section-number">3.11.2</span> Adress 0x9000000 out of
+memory map</h3>
+<p>Cette erreur peut se produire dans plusieurs contextes :</p>
+<ul>
+<li>Vous essayez de downgrade votre NumWorks sur Epsilon 18.2.0. Pour
+résoudre ce problème, vous devez appuiyer sur RESET et 6 en même temps
+(le RESET doit être relâché avant le 6). Une fois cette manipulation
+effectuée, votre NumWorks devrait afficher
+<code>numworks.com/rescue</code>. Si ce n’est pas le cas, réessayez
+d’appuyer sur les touches RESET et 6.</li>
+<li>Vous utilisez le WebDFU pour installer un fichier binaire sur votre
+NumWorks déverrouillée depuis le bootloader interne du STM32 (RESET et
+6). Pour résoudre ce problème, démarrez votre NumWorks normalement et
+réessayez. Si vous ne pouvez pas démarrer votre NumWorks normalement,
+vous devez installer le mode de récupération. Pour ce faire, rendez-vous
+dans la section <a href="#installer-le-mode-de-récupération">Installer
+le mode de récupération</a>.</li>
+</ul>
+<h2 data-number="3.12" id="applications-externes-omegaupsilon"><span
+class="header-section-number">3.12</span> Applications externes
+(Omega/Upsilon)</h2>
+<blockquote>
+<p><strong>Note :</strong> Cette section concerne uniquement les
+applications externes d’Omega et Upsilon. Les applications externes
+d’Epsilon sont gérées différemment et ne sont pas couvertes par ce
+guide.</p>
+</blockquote>
+<p>Les applications externes sont des applications supplémentaires qui
+sont installables sur votre NumWorks déverrouillée.</p>
+<h3 data-number="3.12.1"
+id="comment-installer-des-applications-externes"><span
+class="header-section-number">3.12.1</span> Comment installer des
+applications externes ?</h3>
+<p>Pour installer des applications externes, vous devez vous rendre sur
+le site des applications externes correspondant a votre système
+d’exploitation. Pour Omega, rendez-vous sur <a
+href="https://external.getomega.dev/">le site des applications externes
+d’Omega</a>. Pour Upsilon, rendez-vous sur <a
+href="https://upsilonnumworks.github.io/Upsilon-External/">le site des
+applications externes d’Upsilon</a>.</p>
+<p>Une fois sur le site, vous verrez une liste d’applications externes.
+Pour les ajouter à votre liste d’applications, cliquez sur le bouton
+<code>Add</code> sous l’application que vous souhaitez installer. Vous
+pouvez en sélectionner plusieurs en même temps.</p>
+<p>Si votre application nécessite des fichiers supplémentaires, vous
+devez les ajouter à l’aide du bouton <code>Custom file</code> situé au
+dessis du bouton <code>Install</code>.</p>
+<p>Vous pouvez également sélectionner un fond d’écran pour votre
+application en utilisant le bouton <code>Image file</code> sous le texte
+<code>Wallpaper</code>. Une fois que vous avez sélectionné votre image,
+vous pouvez la redimensionner en utilisant la fenêtre qui va
+s’ouvrir.</p>
+<p>Une fois que vous avez sélectionné toutes les applications que vous
+souhaitez installer, cliquez sur le bouton <code>Install</code> situé à
+droit de la liste des applications. Sélectionnez votre NumWorks dans la
+liste des périphériques et cliquez sur <code>Connexion</code>.</p>
+<blockquote>
+<p><strong>Note :</strong> À chaque fois que vous installez des
+applications externes, les applications déjà installées sont supprimées.
+Si vous souhaitez conserver vos applications, vous devez les installer
+en même temps que les nouvelles applications.</p>
+</blockquote>
+<h3 data-number="3.12.2"
+id="comment-désinstaller-des-applications-externes"><span
+class="header-section-number">3.12.2</span> Comment désinstaller des
+applications externes ?</h3>
+<p>Pour désinstaller des applications externes, vous devez vous rendre
+sur le site des applications externes correspondant a votre système
+d’exploitation (décris dans la section précédente). Une fois sur le
+site, cliquez sur le bouton <code>Install</code> sans sélectionner
+aucune application. Sélectionnez votre NumWorks dans la liste des
+périphériques et cliquez sur <code>Connexion</code>.</p>
+<p>Toutes les applications externes seront alors supprimées de votre
+NumWorks.</p>
+<h3 data-number="3.12.3"
+id="grande-quantité-de-fichiers-lors-de-linstallation-dapplications-externes"><span
+class="header-section-number">3.12.3</span> Grande quantité de fichiers
+lors de l’installation d’applications externes</h3>
+<blockquote>
+<p><strong>Note :</strong> Cette section concerne uniquement les
+calculatrices équipées d’un bootloader Upsilon.</p>
+</blockquote>
+<p>Si vous avez un message d’erreur vous indiquant que vous avez une
+grande quantité de fichiers et vous demandant de passer par le
+bootloader, vous devez passer par le bootloader pour installer vos
+applications externes.</p>
+<blockquote>
+<p><strong>Note :</strong> Cela supprimera votre slot B si vous avez un
+slot B.</p>
+</blockquote>
+<p>Message d’erreur :</p>
+<pre class="text"><code>You are writing a large amount of files to your calculator. If you are using a
+recent version of Upsilon, you must go through the bootloader (reset button on
+the back) to make sure that the files will not be written over running code</code></pre>
+<p>Pour résoudre ce problème, vous devez accéder au bootloader
+d’Upsilon. Pour cela, appuyez sur le bouton reset situé à l’arrière de
+votre calculatrice. Une fois que vous êtes dans le bootloader, appuyez
+sur 4 (<code>Installer Mode</code>) puis sur 1
+(<code>Flash slots</code>). Votre calculatrice va alors afficher
+<code>Waiting for slots…</code> et vous pouvez alors installer vos
+applications externes.</p>
+<h3 data-number="3.12.4"
+id="referenceerror-commandname-is-not-defined"><span
+class="header-section-number">3.12.4</span> ReferenceError: commandName
+is not defined</h3>
+<p>Cette erreur est due au fait que vous avez essayé d’installer une
+application sur une calculatrice N0100, qui ne supporte pas les
+applications externes.</p>
+<p>La raison pour laquelle elle ne les supporte pas est qu’il n’y a pas
+assez de mémoire pour les installer. La mémore de la calculatrice N0100
+est de 1 Mo, et déjà, c’est insuffisant pour installer le système
+d’exploitation en entier.</p>
+<h3 data-number="3.12.5"
+id="les-applications-externes-napparaissent-pas"><span
+class="header-section-number">3.12.5</span> Les applications externes
+n’apparaissent pas</h3>
+<blockquote>
+<p><strong>Note :</strong> Cette section concerne uniquement les
+calculatrices équipées d’un bootloader Upsilon avec Upsilon en slot
+B.</p>
+</blockquote>
+<p>Si lorsque vous installez des applications externes, vous n’avez
+aucune erreur visible sur l’ordinateur mais que les applications
+externes n’apparaissent pas sur votre calculatrice avec Upsilon en slot
+B, c’est dû à un protection de la mémoire.</p>
+<p>Pour résoudre ce problème, la méthode est la même que pour le
+problème de quantité de fichiers (section précédente). Vous devez
+accéder au bootloader d’Upsilon en appuyant sur le bouton reset situé à
+l’arrière de votre calculatrice, puis appuyer sur 4
+(<code>Installer Mode</code>) puis sur 1 (<code>Flash slots</code>).
+Votre calculatrice va alors afficher <code>Waiting for slots…</code> et
+vous pouvez alors installer vos applications externes.</p>
+<blockquote>
+<p><strong>Note :</strong> Si vous aviez l’erreur de quantité de
+fichiers, vous devez installer Upsilon en slot A, sinon Upsilon va
+s’écraser lui-même.</p>
+</blockquote>
+<h3 data-number="3.12.6" id="liseuse-upsilon"><span
+class="header-section-number">3.12.6</span> Liseuse (Upsilon)</h3>
+<p>Le système d’exploitation Upsilon est équipé d’une application
+<code>Liseuse</code> qui permet de lire des livres au format
+<code>.txt</code> et <code>.urt</code> (format spécifique à Upsilon
+permettant de mettre en forme le texte et d’afficher des expressions
+mathématiques).</p>
+<h4 data-number="3.12.6.1" id="comment-installer-des-livres"><span
+class="header-section-number">3.12.6.1</span> Comment installer des
+livres ?</h4>
+<p>Pour installer des livres, vous devez les ajouter comme des
+applications externes, en tant que fichiers <code>.txt</code> ou
+<code>.urt</code>. Pour plus d’informations sur l’installation
+d’applications externes, vous pouvez consulter la section <a
+href="#comment-installer-des-applications-externes-">Comment installer
+des applications externes ?</a>.</p>
+<h4 data-number="3.12.6.2" id="comment-désinstaller-des-livres"><span
+class="header-section-number">3.12.6.2</span> Comment désinstaller des
+livres ?</h4>
+<p>Pour désinstaller des livres, vous devez les supprimer comme des
+applications externes, en tant que fichiers <code>.txt</code> ou
+<code>.urt</code>. Pour plus d’informations sur la désinstallation
+d’applications externes, vous pouvez consulter la section <a
+href="#comment-désinstaller-des-applications-externes-">Comment
+désinstaller des applications externes ?</a>.</p>
+<h4 data-number="3.12.6.3"
+id="ma-calculatrice-plante-quand-je-rouvre-un-livre"><span
+class="header-section-number">3.12.6.3</span> Ma calculatrice plante
+quand je rouvre un livre</h4>
+<p>Ce problème est dû à un bug dans le système de marque-pages de
+Upsilon. Pour résoudre ce problème, vous mettre à jour Upsilon vers la
+dernière version beta.</p>
+<h2 data-number="3.13" id="le-site-de-numworks-ne-fonctionne-pas"><span
+class="header-section-number">3.13</span> Le site de NumWorks ne
+fonctionne pas</h2>
+<p>Si vous rencontrez un problème avec le site de NumWorks en tentant de
+transférer des scripts, vous pouvez essayer d’utiliser le <a
+href="https://yaya-cout.github.io/Numworks-connector/">connecteur
+NumWorks</a>, qui est un site non officiel qui permet de transférer des
+scripts sur votre calculatrice. Même si son interface n’est pas aussi
+agréable que celle du site de NumWorks, il marche beaucoup mieux.</p>
